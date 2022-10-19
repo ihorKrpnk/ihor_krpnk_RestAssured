@@ -58,4 +58,15 @@ public class Address {
     public String getStreet() {
         return street;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "zipcode='" + zipcode + '\'' +
+                ", geo=" + geo +
+                ", suite='" + suite + '\'' +
+                ", city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                '}';
+    }
 }

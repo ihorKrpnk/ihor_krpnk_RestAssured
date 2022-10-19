@@ -15,16 +15,23 @@ public class FifthRestAssuredTest {
                 .when()
                 .get("http://jsonplaceholder.typicode.com/users");
 
-        List<UsersItem> usersItems = Arrays.asList(response.as(UsersItem[].class));
+        UsersItem[] usersItems = response.as(UsersItem[].class);
+        Arrays.stream(usersItems).forEach(System.out::println);
 
-        int firstUsersID = usersItems.get(0).getId();
-        String firstUsersIDName = usersItems.get(0).getName();
-        String firstUsersIDCity = usersItems.get(0).getAddress().getCity();
-        String firstUsersIDStreet = usersItems.get(0).getAddress().getStreet();
+        System.out.println("-----------------------------------------------------------");
 
-        System.out.println(firstUsersID);
-        System.out.println(firstUsersIDName);
-        System.out.println(firstUsersIDCity);
-        System.out.println(firstUsersIDStreet);
+        List<UsersItem> firstUserItems = Arrays.asList(response.as(UsersItem[].class));
+
+        int firstUsersID = firstUserItems.get(0).getId();
+        String firstUsersIDName = firstUserItems.get(0).getName();
+        String firstUsersIDCity = firstUserItems.get(0).getAddress().getCity();
+        String firstUsersIDStreet = firstUserItems.get(0).getAddress().getStreet();
+
+        System.out.println
+                ("first User's ID: " + firstUsersID + "\n"
+                        + "first User's ID name: " + firstUsersIDName + "\n"
+                        + "first User's ID city: " + firstUsersIDCity + "\n"
+                        + "first User's ID street: " + firstUsersIDStreet);
+
     }
 }

@@ -16,4 +16,11 @@ public class Users {
     public List<UsersItem> getUsers() {
         return users;
     }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "users=" + users +
+                '}';
+    }
 }

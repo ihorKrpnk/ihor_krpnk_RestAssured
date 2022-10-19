@@ -91,4 +91,18 @@ public class UsersItem {
     public String getUsername() {
         return username;
     }
+
+    @Override
+    public String toString() {
+        return "UsersItem{" +
+                "website='" + website + '\'' +
+                ", address=" + address +
+                ", phone='" + phone + '\'' +
+                ", name='" + name + '\'' +
+                ", company=" + company +
+                ", id=" + id +
+                ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                '}';
+    }
 }
