@@ -7,7 +7,7 @@ import static io.restassured.RestAssured.*;
 public class FirstRestAssuredTest extends RestAssuredSpecs {
 
     @Test
-    public void firstRestAssuredTest() {
+    public void getAllGamesResponseTimeCheck() {
 
         Response response = given()
                 .spec(videoGamesRequestSpecification)

@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
 public class FifthRestAssuredTest {
 
     @Test
-    public void getCollection() {
+    public void getUsersItemsCollectionUsingDeserialization() {
         Response response = given()
                 .when()
                 .get("http://jsonplaceholder.typicode.com/users");

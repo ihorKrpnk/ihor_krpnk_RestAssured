@@ -6,14 +6,14 @@ import static io.restassured.RestAssured.given;
 public class SecondRestAssuredTest extends RestAssuredSpecs {
 
     @Test
-    public void secondRestAssuredTestWithPOGO() {
+    public void postNewGameUsingSerialization() {
 
         VideoGamesPostRequestPayload videoGamesPostRequestPayload = new VideoGamesPostRequestPayload(
                 0,
                 "2022-10-19T10:58:01.289Z",
                 "KarpTopGame",
                 "bad",
-                9889,
+                9869,
                 "RPG");
 
         given()

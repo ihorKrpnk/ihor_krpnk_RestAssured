@@ -7,13 +7,13 @@ import static io.restassured.RestAssured.given;
 public class ThirdRestAssuredTestDeserialization extends RestAssuredSpecs {
 
     @Test
-    public void thirdRestAssuredTestDeserialization() {
+    public void getOneGameByIDUsingDeserialization() {
 
         Response response = given()
                 .when()
                 .spec(videoGamesRequestSpecification)
                 .when()
-                .get("videogames/2230");
+                .get("videogames/9869");
         response
                 .then()
                 .log()
